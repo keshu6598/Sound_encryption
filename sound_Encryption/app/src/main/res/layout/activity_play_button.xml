@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Play_button">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <!--
+        ProgressBar
+            Visual indicator of progress in some operation. Displays a bar to the user
+            representing how far the operation has progressed; the application can change
+            the amount of progress (modifying the length of the bar) as it moves forward.
+    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="13"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btn"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/play"
+                app:backgroundTint="#E0E0E0"
+                android:layout_margin="16dp" />
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
